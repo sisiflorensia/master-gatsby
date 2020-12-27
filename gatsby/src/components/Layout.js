@@ -4,16 +4,18 @@ import Nav from './Nav';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
+import Content from './ContentStyles';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
       <GlobalStyles />
       <Typography />
-      
-      <Nav />
-      {children}
-      <Footer />
-    </div>
+      <Content>
+        <Nav />
+        {children}
+        <Footer />
+      </Content>
+    </>
   );
 }
